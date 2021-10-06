@@ -179,17 +179,22 @@ BOOL BrowserWindow::InitInstance(HINSTANCE hInstance, int nCmdShow)
 
     // Get directory for user data. This will be kept separated from the
     // directory for the browser UI data.
-    //L"C:\\Users\\Administrator2\\AppData\\Roaming\\Microsoft\\WebView2Browser"
+    //GetAppDataDirectory() = L"C:\\Users\\Administrator2\\AppData\\Roaming\\Microsoft\\WebView2Browser"
     std::wstring userDataDirectory = GetAppDataDirectory();
-
-
     userDataDirectory.append(L"\\User Data2");
+
+
+    std::wstring customUserDataDirectory = GetAppDirectory();
+
+    customUserDataDirectory.append(L"\\User Data");
+    
+    
 
     // Create WebView environment for web content requested by the user. All
     // tabs will be created from this environment and kept isolated from the
     // browser UI. This enviroment is created first so the UI can request new
     // tabs when it's ready.
-    HRESULT hr = CreateCoreWebView2EnvironmentWithOptions(nullptr, userDataDirectory.c_str(),
+    HRESULT hr = CreateCoreWebView2EnvironmentWithOptions(nullptr,  customUserDataDirectory.c_str(),
         nullptr, Callback<ICoreWebView2CreateCoreWebView2EnvironmentCompletedHandler>(
             [this](HRESULT result, ICoreWebView2Environment* env) -> HRESULT
     {
@@ -893,6 +898,11 @@ int BrowserWindow::GetDPIAwareBound(int bound)
     return (bound * GetDpiForWindow(m_hWnd) / DEFAULT_DPI);
 }
 
+
+/// <summary>
+/// default value:L"C:\\Users\\Administrator2\\AppData\\Roaming\\Microsoft\\WebView2Browser"
+/// </summary>
+/// <returns></returns>
 std::wstring BrowserWindow::GetAppDataDirectory()
 {
     TCHAR path[MAX_PATH];
@@ -912,13 +922,41 @@ std::wstring BrowserWindow::GetAppDataDirectory()
     return dataDirectory;
 }
 
-std::wstring BrowserWindow::GetFullPathFor(LPCWSTR relativePath)
+/// <summary>
+/// default value:L"C:\\Users\\Administrator2\\AppData\\Roaming\\Microsoft\\WebView2Browser"
+/// </summary>
+/// <returns></returns>
+std::wstring BrowserWindow::GetAppDirectory()
 {
-    WCHAR path[MAX_PATH];
+     WCHAR path[MAX_PATH];
+     std::wstring dataDirectory;
+
+    //path= L"F:\\developer_WebView2_cplusplus\\Debug_x64\\WebView2Browser.exe"
     GetModuleFileNameW(m_hInst, path, MAX_PATH);
     std::wstring pathName(path);
 
     std::size_t index = pathName.find_last_of(L"\\") + 1;
+
+    //pathName=L"F:\\developer_WebView2_cplusplus\\Debug_x64\\wvbrowser_ui\\controls_ui\\default.html"
+
+    dataDirectory = pathName.substr(0,index);
+    
+
+
+    return dataDirectory;
+}
+
+std::wstring BrowserWindow::GetFullPathFor(LPCWSTR relativePath)
+{
+    WCHAR path[MAX_PATH];
+
+    //path= L"F:\\developer_WebView2_cplusplus\\Debug_x64\\WebView2Browser.exe"
+    GetModuleFileNameW(m_hInst, path, MAX_PATH);
+    std::wstring pathName(path);
+
+    std::size_t index = pathName.find_last_of(L"\\") + 1;
+
+    //pathName=L"F:\\developer_WebView2_cplusplus\\Debug_x64\\wvbrowser_ui\\controls_ui\\default.html"
     pathName.replace(index, pathName.length(), relativePath);
 
     return pathName;

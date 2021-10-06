@@ -1,5 +1,5 @@
 ---
-description: "A web browser built with the Microsoft Edge WebView2 control."
+description: "A web browser built with the Microsoft Edge WebView2 control.(c++)"
 extendedZipContent: 
   - 
     path: LICENSE
@@ -12,7 +12,15 @@ products:
   - microsoft-edge
 urlFragment: webview2browser
 ---
-# WebView2Browser
+# WebView2Browser(c++)
+
+local:F:\developer_WebView2_cplusplus\WebViewBrowserApp.vcxproj
+
+git:https://github.com/iaspnetcore/WebView2BrowserAppCplusplus
+
+fork from:https://github.com/MicrosoftEdge/WebView2Browser
+
+blog:https://www.iaspnetcore.com/Blog/BlogPost/614e5ec9826d8001ef0d023b/creating-a-webview2-component-with-mfc-c
 
 A web browser built with the [Microsoft Edge WebView2](https://aka.ms/webview2) control.
 

@@ -61,5 +61,6 @@
   <ItemGroup>
     <None Include="ui_bar.html" />
     <None Include="packages.config" />
+    <None Include="README.md" />
   </ItemGroup>
 </Project>

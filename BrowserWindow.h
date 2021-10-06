@@ -20,6 +20,7 @@ public:
 
     static BOOL LaunchWindow(_In_ HINSTANCE hInstance, _In_ int nCmdShow);
     static std::wstring GetAppDataDirectory();
+    std::wstring GetAppDirectory();  //custom add by freeman  20211006
     std::wstring GetFullPathFor(LPCWSTR relativePath);
     HRESULT HandleTabURIUpdate(size_t tabId, ICoreWebView2* webview);
     HRESULT HandleTabHistoryUpdate(size_t tabId, ICoreWebView2* webview);
