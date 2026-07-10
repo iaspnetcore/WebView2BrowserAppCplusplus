@@ -62,5 +62,6 @@
     <None Include="ui_bar.html" />
     <None Include="packages.config" />
     <None Include="README.md" />
+    <None Include=".github\upgrades\scenarios\cppbuildtoolsupgrade\scenario-instructions.md" />
   </ItemGroup>
 </Project>

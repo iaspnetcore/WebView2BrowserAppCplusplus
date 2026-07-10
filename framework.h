@@ -59,3 +59,10 @@
 #define MG_GET_HISTORY 26
 #define MG_REMOVE_HISTORY_ITEM 27
 #define MG_CLEAR_HISTORY 28
+
+#ifndef WINVER
+#define WINVER 0x0A00          // Target Windows 10 or later
+#endif
+#ifndef _WIN32_WINNT
+#define _WIN32_WINNT 0x0A00    // Target Windows 10 or later
+#endif
