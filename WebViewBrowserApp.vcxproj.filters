@@ -61,7 +61,10 @@
   <ItemGroup>
     <None Include="ui_bar.html" />
     <None Include="packages.config" />
-    <None Include="README.md" />
     <None Include=".github\upgrades\scenarios\cppbuildtoolsupgrade\scenario-instructions.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natvis" />
+    <Natvis Include="$(MSBuildThisFileDirectory)..\..\natvis\wil.natstepfilter" />
   </ItemGroup>
 </Project>

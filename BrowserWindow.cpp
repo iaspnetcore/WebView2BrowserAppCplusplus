@@ -179,11 +179,12 @@ BOOL BrowserWindow::InitInstance(HINSTANCE hInstance, int nCmdShow)
 
     // Get directory for user data. This will be kept separated from the
     // directory for the browser UI data.
-    //GetAppDataDirectory() = L"C:\\Users\\Administrator2\\AppData\\Roaming\\Microsoft\\WebView2Browser"
+    //GetAppDataDirectory() = L"C:\\Users\\Alice\\AppData\\Roaming\\Microsoft\\WebView2Browser"
     std::wstring userDataDirectory = GetAppDataDirectory();
     userDataDirectory.append(L"\\User Data2");
 
 
+    // GetAppDirectory()=E:\Browser\User Data
     std::wstring customUserDataDirectory = GetAppDirectory();
 
     customUserDataDirectory.append(L"\\User Data");

@@ -1,9 +1,24 @@
 
-20260707
+20260710  
 
-install vc tools v1.42
+vs2026 
 
-无法打开包括文件: “atlstr.h”: No such file or directory vs2026 v1.42
+~~~
+
+v145 for Microsoft C++ Build Tools
+
+Windows SDK : 10.0.26100.0
+
+MSVC       : 14.51.36231
+
+c++ 语言标准:ISO C++17 标准 (/std:c++17)
+
+~~~
+
+
+
+
+
 
 
 
