@@ -924,7 +924,7 @@ std::wstring BrowserWindow::GetAppDataDirectory()
 }
 
 /// <summary>
-/// default value:L"C:\\Users\\Administrator2\\AppData\\Roaming\\Microsoft\\WebView2Browser"
+/// default value:L"F:\\developer_WebView2_cplusplus\\Debug_x64\\"
 /// </summary>
 /// <returns></returns>
 std::wstring BrowserWindow::GetAppDirectory()

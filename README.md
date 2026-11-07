@@ -20,7 +20,15 @@ git:https://github.com/iaspnetcore/WebView2BrowserAppCplusplus
 
 fork from:https://github.com/MicrosoftEdge/WebView2Browser
 
-blog:https://www.iaspnetcore.com/Blog/BlogPost/614e5ec9826d8001ef0d023b/creating-a-webview2-component-with-mfc-c
+blog:
+
+https://www.iaspnetcore.com/Blog/BlogPost/614e5ec9826d8001ef0d023b/creating-a-webview2-component-with-mfc-c
+
+https://www.iaspnetcore.com/Blog/BlogPost/614e5ec9826d8001ef0d023b/diy-browser-webview2browsercreating-a-webview2-component-with-mfc-ctsking
+
+tools: vs 2026
+
+
 
 A web browser built with the [Microsoft Edge WebView2](https://aka.ms/webview2) control.
 

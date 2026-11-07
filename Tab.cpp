@@ -7,6 +7,12 @@
 
 using namespace Microsoft::WRL;
 
+// <summary>    
+// Creates a new Tab instance and initializes it with the given parameters.  
+// by default, the new tab will be created in the background.  
+// If shouldBeActive is true, the new tab will be created in the foreground and activated.
+// add  by iaspnetcore,20261107
+// </summary>
 std::unique_ptr<Tab> Tab::CreateNewTab(HWND hWnd, ICoreWebView2Environment* env, size_t id, bool shouldBeActive)
 {
     std::unique_ptr<Tab> tab = std::make_unique<Tab>();

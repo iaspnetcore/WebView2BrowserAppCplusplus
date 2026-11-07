@@ -15,6 +15,23 @@ c++ 语言标准:ISO C++17 标准 (/std:c++17)
 
 ~~~
 
+
+~~~
+Platform Toolset : v145
+        │
+        ├── Compiler : MSVC 14.51.36231 (cl.exe 19.51.x)
+        ├── Linker   : link.exe
+        └── Libraries: MSVC CRT/STL
+
+Windows SDK : 10.0.26100.0
+        └── Windows API Headers & Libraries
+
+Language Standard
+        └── ISO C++17 (/std:c++17)
+
+~~~
+
+
 ## update to v145 for Microsoft C++ Build Tools, Windows SDK : 10.0.26100.0, MSVC : 14.51.36231, c++ 语言标准:ISO C++17 标准 (/std:c++17) by 20260710
 
 step 1.按照 重定向工具集 $\rightarrow$ 更新 NuGet SDK $\rightarrow$ 锁定 C++17 语言标准 的步骤，即可在 Win10 + VS2026 环境下顺利编译通过 WebView2Browser。
