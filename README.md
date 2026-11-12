@@ -26,8 +26,12 @@ https://www.iaspnetcore.com/Blog/BlogPost/614e5ec9826d8001ef0d023b/creating-a-we
 
 https://www.iaspnetcore.com/Blog/BlogPost/614e5ec9826d8001ef0d023b/diy-browser-webview2browsercreating-a-webview2-component-with-mfc-ctsking
 
-tools: vs 2026
+tools: Visual Studio 2026(C++ support installed)
 
+
+latest WebView2 Runtime version: 
+
+https://developer.microsoft.com/en-us/microsoft-edge/webview2
 
 
 A web browser built with the [Microsoft Edge WebView2](https://aka.ms/webview2) control.

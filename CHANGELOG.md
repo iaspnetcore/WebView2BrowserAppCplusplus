@@ -3,6 +3,15 @@
 
 vs2026 
 
+
+cpprestsdk.v141.2.10.12.1  
+
+Microsoft.Web.WebView 1.0.4078.44
+
+Microsoft.Windows.ImplementationLibrary.1.0.260126.7
+
+
+
 ~~~
 
 v145 for Microsoft C++ Build Tools
@@ -47,7 +56,7 @@ github issue:
 
 
 
-20210610
+## 20210610
 
 vs2017
 
