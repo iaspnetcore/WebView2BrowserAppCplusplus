@@ -227,9 +227,12 @@ HRESULT BrowserWindow::InitUIWebViews()
     std::wstring browserDataDirectory = GetAppDataDirectory();
     browserDataDirectory.append(L"\\Browser Data");
 
+    std::wstring custombrowserDataDirectory = GetAppDirectory();
+    custombrowserDataDirectory.append(L"\\Browser Data");
+
     // Create WebView environment for browser UI. A separate data directory is
     // used to isolate the browser UI from web content requested by the user.
-    return CreateCoreWebView2EnvironmentWithOptions(nullptr, browserDataDirectory.c_str(),
+    return CreateCoreWebView2EnvironmentWithOptions(nullptr, custombrowserDataDirectory.c_str(),
         nullptr, Callback<ICoreWebView2CreateCoreWebView2EnvironmentCompletedHandler>(
             [this](HRESULT result, ICoreWebView2Environment* env) -> HRESULT
     {

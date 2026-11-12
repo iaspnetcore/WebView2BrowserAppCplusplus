@@ -33,6 +33,10 @@ latest WebView2 Runtime version:
 
 https://developer.microsoft.com/en-us/microsoft-edge/webview2
 
+https://www.nuget.org/packages/Microsoft.Web.WebView2/
+
+https://learn.microsoft.com/zh-cn/microsoft-edge/webview2/release-notes/runtime/
+
 
 A web browser built with the [Microsoft Edge WebView2](https://aka.ms/webview2) control.
 
